@@ -7,6 +7,7 @@ import org.testng.annotations.TestInstance;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class _03_GetAll_Row_Column extends JDBC_Parent {
 
@@ -57,8 +58,12 @@ public class _03_GetAll_Row_Column extends JDBC_Parent {
     public void testhepsi2D_Array_metod() throws SQLException {
         // film tablosundaki tüm satırları ve tüm sütunları yazdırınız, aynı mysql sonuç ekranında olduğu gibi
         // fakat metod kullanınız, metoda sorguyu gönderiniz ve orada yazdırınız.
+/* Scanner scan=new Scanner(System.in);
+        System.out.println("Lütfen arama yapmak istediginiz dosyayi giriniz:");
+        String  str= scan.nextLine();
+        columnAllWrite(str);*/
 
-         getTable("select * from language");
+         getTable("select * from actor");
     }
 
     public void getTable(String str) throws SQLException {
