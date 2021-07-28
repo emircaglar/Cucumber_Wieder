@@ -58,6 +58,15 @@ public class Parent {
 
     }
 
+    public List<WebElement> waitUntilAllElementvisible(List<WebElement> elements) {
+        WebDriverWait wait = new WebDriverWait(BaseDriver_Singleton.getDriver(), 30);
+        for (WebElement e:elements
+             ) {
+            scrollToElement(e);
+        }
+        wait.until(ExpectedConditions.visibilityOfAllElements(elements));
+       return elements;
+    }
     public void waitList_numberOfElementsToBeLessThan(By selector, int number) {
         WebDriverWait wait=new WebDriverWait(BaseDriver_Singleton.getDriver(), 10);
         wait.until(ExpectedConditions.numberOfElementsToBeLessThan(selector,number));

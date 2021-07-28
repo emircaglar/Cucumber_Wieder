@@ -76,6 +76,12 @@ public class DialogContent extends Parent {
     private WebElement ExamInputName;
 
 
+    @FindBy(xpath = "//tbody//tr//td[2]")
+    public List<WebElement> nameList;
+
+
+    //tbody//tr//td[2]
+
     WebElement Myelement;
 
     public void findAndSend(String elemenName, String value) {
